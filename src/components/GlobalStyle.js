@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle `
 
 body{
     background: #1b1b1b;
+    font-family: Inter, sans-serif;
 }
 button{
     font-weight: bold;
@@ -35,6 +36,7 @@ h3{
 }
 h4{
     font-weight: bold;
+    font-size: 2rem;
 }
 a{
     font-size: 1.1rem;
@@ -49,15 +51,6 @@ p{
     font-size: 1.4rem;
 }
 
-img{
-    height: 40%;
-    width: 40%;
-}
-
-.icon{
-    height: 10%;
-    width: 10%;
-}
 
 `;
 
