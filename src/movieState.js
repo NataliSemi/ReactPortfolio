@@ -1,6 +1,10 @@
-import athlete from '../img/athlete.jpg';
-import goodtime from '../img/goodtime.jpg';
-import theracer from '../img/theracer.jpg';
+import athlete from './img/athlete.jpg';
+import goodtime from './img/goodtime.jpg';
+import theracer from './img/theracer.jpg';
+import athlete2 from './img/athlete2.jpg';
+
+import goodtime2 from './img/goodtime2.jpg';
+
 
 export const MovieState = () => {
     return [
@@ -24,9 +28,9 @@ export const MovieState = () => {
         },
         {
             title: 'Good Times',
-            mainImg: goodtimes,
+            mainImg: goodtime,
             url: '/work/good-times',
-            secondaryImg: goodtimes2,
+            secondaryImg: goodtime2,
             awards: [
                 {
                                     
@@ -39,7 +43,7 @@ export const MovieState = () => {
                     description: 
                     "Lorem is simple dummy text of the print"
                 },
-                }
+                
             ]
         }
     ]
