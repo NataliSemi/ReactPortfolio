@@ -28,6 +28,7 @@ export const MovieState = () => {
         },
         {
             title: 'Good Times',
+            description: 'Sit and Relax',
             mainImg: goodtime,
             url: '/work/good-times',
             secondaryImg: goodtime2,
@@ -35,7 +36,7 @@ export const MovieState = () => {
                 {
                                     
                     title: 'Truly A masterpiece',
-                    descriptin: 
+                    description: 
                     "Lore Ipsum some tet"
                 },
                 {
