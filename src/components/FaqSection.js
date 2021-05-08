@@ -1,34 +1,55 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Layout } from '../style'
 
 const FaqSection = () => {
+    const [faqToggle, setFaqToggle] = useState([
+        false,
+        false,
+        false,
+        false,
+        false,
+    ]);
     return(
         <Faq>
-            <h2>Any Question <span>FAQ</span></h2>
-            <div className="question">
+            <h2>
+                Any Question <span>FAQ</span>
+            </h2>
+                <div onClick={() => setFaqToggle(!faqToggle)} className="question">
                 <h4>How Do I Start</h4>
                 <div className="answer">
+                <p>Lorem ipsum dolor sit amet.</p>
+                {faqToggle && (
                     <p>
-                        I write something here but not now. 
+                        Kfdfdsfnjnf dfjksdfhaeaanf aewiorpwkrMNE F;LRS,;LMGDGNSFDOSFKM,SF 
+                        EJFNKEWNFSDF FLdkfnadf erenfmsnfmdn
                     </p>
+                )}
                 </div>
                 <div className="faq-line"></div>
             </div>
-            <div className="question">
+            <div onClick={() => setFaqToggle(!faqToggle)}  className="question">
                 <h4>Daily Schedule</h4>
                 <div className="answer">
-                    <p>
-                        I write something here but not now. 
-                    </p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                    {faqToggle && (
+                        <p>
+                            Kfdfdsfnjnf dfjksdfhaeaanf aewiorpwkrMNE F;LRS,;LMGDGNSFDOSFKM,SF 
+                            EJFNKEWNFSDF FLdkfnadf erenfmsnfmdn
+                        </p>
+                    )}
                 </div>
                 <div className="faq-line"></div>
             </div>
-            <div className="question">
+            <div onClick={() => setFaqToggle(!faqToggle)}  className="question">
                 <h4>Different Payment</h4>
                 <div className="answer">
+                {faqToggle && (
                     <p>
-                        I write something here but not now. 
+                        Kfdfdsfnjnf dfjksdfhaeaanf aewiorpwkrMNE F;LRS,;LMGDGNSFDOSFKM,SF 
+                        EJFNKEWNFSDF FLdkfnadf erenfmsnfmdn
                     </p>
+                )}
                 </div>
                 <div className="faq-line"></div>
             </div>

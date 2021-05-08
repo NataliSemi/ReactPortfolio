@@ -6,17 +6,17 @@ import goodtime from '../img/goodtime.jpg';
 import theracer from '../img/theracer.jpg';
 //Animations
 import { motion } from 'framer-motion';
-import {pageAnimation} from '../animation';
+import {pageAnimation, fade, photoAnim } from '../animation';
 
 
 const OurWork = () => {
     return(
         <Work variants={pageAnimation} initial="hidden" animate="show">
             <Movie>
-                <h2>The Athlete</h2>
-                <div className="line"></div>
+                <motion.h2 variants={fade}>The Athlete</motion.h2>
+                <motion.div className="line"></motion.div>
                 <Link>
-                    <img src={athlete} alt="athlete"/>
+                    <motion.img varinats={ photoAnim } src={athlete} alt="athlete"/>
                 </Link>
             </Movie>
 
