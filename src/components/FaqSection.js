@@ -1,67 +1,65 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { Layout } from '../style'
+import Toggle from './Toggle';
+import { AnimateSharedLayout } from 'framer-motion';
 
 const FaqSection = () => {
-    const [faqToggle, setFaqToggle] = useState([
-        false,
-        false,
-        false,
-        false,
-        false,
-    ]);
+
     return(
         <Faq>
+   
             <h2>
                 Any Question <span>FAQ</span>
             </h2>
-                <div onClick={() => setFaqToggle(!faqToggle)} className="question">
-                <h4>How Do I Start</h4>
-                <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                {faqToggle && (
-                    <p>
-                        Kfdfdsfnjnf dfjksdfhaeaanf aewiorpwkrMNE F;LRS,;LMGDGNSFDOSFKM,SF 
-                        EJFNKEWNFSDF FLdkfnadf erenfmsnfmdn
-                    </p>
-                )}
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div onClick={() => setFaqToggle(!faqToggle)}  className="question">
-                <h4>Daily Schedule</h4>
-                <div className="answer">
-                <p>Lorem ipsum dolor sit amet.</p>
-                    {faqToggle && (
+            <AnimateSharedLayout>
+            <Toggle title='How do I Start'>
+                    <div className="question">
+                    <div className="answer">
+                    <p>Lorem ipsum dolor sit amet.</p>
                         <p>
                             Kfdfdsfnjnf dfjksdfhaeaanf aewiorpwkrMNE F;LRS,;LMGDGNSFDOSFKM,SF 
                             EJFNKEWNFSDF FLdkfnadf erenfmsnfmdn
                         </p>
-                    )}
+                    </div>
                 </div>
-                <div className="faq-line"></div>
-            </div>
-            <div onClick={() => setFaqToggle(!faqToggle)}  className="question">
-                <h4>Different Payment</h4>
+            </Toggle>
+            <Toggle title="Daily Schelude">
+            <div className="question">
+                <h4></h4>
                 <div className="answer">
-                {faqToggle && (
+                <p>Lorem ipsum dolor sit amet.</p>
+
+                        <p>
+                            Kfdfdsfnjnf dfjksdfhaeaanf aewiorpwkrMNE F;LRS,;LMGDGNSFDOSFKM,SF 
+                            EJFNKEWNFSDF FLdkfnadf erenfmsnfmdn
+                        </p>
+
+                </div>
+                
+            </div>
+            </Toggle>
+            <Toggle title="Different Payment">
+            <div  className="question">
+                <div className="answer">
+
                     <p>
                         Kfdfdsfnjnf dfjksdfhaeaanf aewiorpwkrMNE F;LRS,;LMGDGNSFDOSFKM,SF 
                         EJFNKEWNFSDF FLdkfnadf erenfmsnfmdn
                     </p>
-                )}
+
                 </div>
-                <div className="faq-line"></div>
             </div>
+            </Toggle>
+            <Toggle title="What products do you offer?">
             <div className="question">
-                <h4>What products do you offer?</h4>
                 <div className="answer">
                     <p>
                         I write something here but not now. 
                     </p>
                 </div>
-                <div className="faq-line"></div>
             </div>
+            </Toggle>
+            </AnimateSharedLayout>
         </Faq>
     )
 };
